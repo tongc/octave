@@ -20,3 +20,17 @@ subplot (223);
 subplot (224);
   plot (y, power(y, 2));
   title ('test plot 2');    
+  
+subplot (221);
+tx = ty = linspace (-8, 8, 300);
+[xx, yy] = meshgrid (tx, ty);
+r = sqrt (xx .^ 2 + yy .^ 2) + eps;
+tz = sin (r) ./ r;
+mesh (tx, ty, tz);
+
+subplot (222);
+tx = ty = linspace (-8, 8, 300);
+[xx, yy] = meshgrid (tx, ty);
+r = xx + yy;
+tz = sin (r) ./ r;
+mesh (tx, ty, tz);
