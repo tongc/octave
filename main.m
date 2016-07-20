@@ -77,8 +77,8 @@ x = 0:0.01:2;                 %  generate the x-vector
 
 subplot (5,5,18);
   yy = 1:100; 
-  plot (yy, log2(yy));
-  title ('n * log10 n');  
+  plot (yy, log2(yy).*yy);
+  title ('nlogn');
   
 subplot (5,5,19);
   yy = 1; 
