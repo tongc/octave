@@ -74,7 +74,16 @@ x = 0:0.01:2;                 %  generate the x-vector
 	xlabel('x (arbitrary units)');       %  add axis labels and plot title
 	ylabel('y (arbitrary units)');
 	title('Plot of y = 5*x*exp(-3*x) + noise');
- 
+
+subplot (5,5,18);
+  yy = 1:100; 
+  plot (yy, log2(yy));
+  title ('n * log10 n');  
+  
+subplot (5,5,19);
+  yy = 1; 
+  plot (yy, yy);
+  title ('n * log10 n');  
 #subplot (5,5,17);
 #  plotmatrix (randn (100, 3), 'g+')
 #  title ('treeplot [2 4 2 0 6 4 6]');  
